@@ -4,9 +4,24 @@
 
 <table class="table table-bordered">
   <thead>
-
+    <tr>
+      <% @people[0].each_key do |head| %>
+      <th>
+        <%= head %>
+      </th>
+      <% end %>
+    </tr>
   </thead>
-  <tbody>
 
+  <tbody>
+    <% @people.each do |person_hash| %>
+    <tr>
+      <% person_hash.each_value do |person_info| %>
+      <td>
+        <%= person_info %>
+      </td>
+      <% end %>
+    </tr>
+    <% end %>
   </tbody>
 </table>
